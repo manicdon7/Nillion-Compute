@@ -169,7 +169,7 @@ class NadaPublish:
 
 # Example of how to run the StoreProgram function
 async def main():
-    publish = NadaPublish(".env", "sample seed", "./MatchingAlgo.nada.bin", "MatchingAlgo")
+    publish = NadaPublish(".env", "asdf asdf asdf", "./MatchingAlgo.nada.bin", "MatchingAlgo")
     log, result = await publish.StoreProgram("MatchParty", {"age_int2": 18, "location_int1": 2, "Match_gender_int": 0, "age_int1": 30, "looking_for_gender_int": 0}, verbose=True)
     print(f"Computation result: {result}")
     print(f"Log: \n{log}")
