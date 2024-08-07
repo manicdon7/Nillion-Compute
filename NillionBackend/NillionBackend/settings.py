@@ -63,34 +63,25 @@ CORS_ALLOW_HEADERS = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOW_ALL_ORIGINS = True
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3001",
-#     "http://localhost:3000",
-# ]
-
+CORS_ALLOW_ALL_ORIGINS = False  # Make sure this is set to False
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3001',
+    'https://nillion-compute.vercel.app',
+    # Add any other allowed origins here
+]
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
+    'DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT'
 ]
 CORS_ALLOW_HEADERS = [
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
+    'accept', 'accept-encoding', 'authorization', 'content-type',
+    'dnt', 'origin', 'user-agent', 'x-csrftoken', 'x-requested-with'
 ]
+
+CORS_ALLOW_CREDENTIALS = True
+
 
 ROOT_URLCONF = 'NillionBackend.urls'
 
