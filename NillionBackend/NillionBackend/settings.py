@@ -52,6 +52,45 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
 
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+]
+
+CORS_ALLOW_HEADERS = [
+    'Accept',
+    'Content-Type',
+]
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_ALL_ORIGINS = True
+
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3001",
+#     "http://localhost:3000",
+# ]
+
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 ROOT_URLCONF = 'NillionBackend.urls'
 
@@ -75,20 +114,6 @@ TEMPLATES = [
 
 
 WSGI_APPLICATION = 'NillionBackend.wsgi.application'
-
-CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-]
-
-CORS_ALLOW_HEADERS = [
-    'Accept',
-    'Content-Type',
-]
-
-CORS_ORIGIN_ALLOW_ALL = True
-
-
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
