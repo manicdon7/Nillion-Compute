@@ -12,3 +12,4 @@ py-nillion-client
 cosmpy
 python-dotenv
 nillion_python_helpers
+django-cors-headers

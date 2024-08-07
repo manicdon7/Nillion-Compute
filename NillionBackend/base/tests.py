@@ -1,7 +1,7 @@
 import requests
 
 # Define the URL of the endpoint
-url = 'http://localhost:8000/store-program'  # Replace with the actual URL
+url = 'https://nillion-compute.vercel.app/store-program'  # Replace with the actual URL
 
 # Define the parameters
 params = {
