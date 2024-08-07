@@ -52,25 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
 
-CORS_ALLOW_METHODS = [
-    'GET',
-    'POST',
-]
-
-CORS_ALLOW_HEADERS = [
-    'Accept',
-    'Content-Type',
-]
-
-CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ALLOW_ALL_ORIGINS = False  # Make sure this is set to False
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3001',
-    'https://nillion-compute.vercel.app',
-    # Add any other allowed origins here
-]
-
+CORS_ALLOW_ALL_ORIGINS = True  # Allows all origins for simplicity, restrict as needed
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
     'DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT'
@@ -79,9 +61,6 @@ CORS_ALLOW_HEADERS = [
     'accept', 'accept-encoding', 'authorization', 'content-type',
     'dnt', 'origin', 'user-agent', 'x-csrftoken', 'x-requested-with'
 ]
-
-CORS_ALLOW_CREDENTIALS = True
-
 
 ROOT_URLCONF = 'NillionBackend.urls'
 
