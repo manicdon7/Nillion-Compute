@@ -1,0 +1,16 @@
+---
+program: MatchingAlgo
+inputs:
+  age_int2:
+    SecretInteger: "18"
+  location_int1:
+    SecretInteger: "2"
+  Match_gender_int:
+    SecretInteger: "0"
+  age_int1:
+    SecretInteger: "30"
+  looking_for_gender_int:
+    SecretInteger: "0"
+expected_outputs:
+  MatchingPercentage:
+    SecretInteger: "3"
