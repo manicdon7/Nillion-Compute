@@ -40,15 +40,14 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # Place it at the top
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'NillionBackend.urls'
@@ -71,16 +70,15 @@ TEMPLATES = [
     },
 ]
 
-# Allow all origins
 CORS_ALLOW_ALL_ORIGINS = True
 
-# Alternatively, to allow specific origins, use:
+# Alternatively, if you want to specify certain origins:
 # CORS_ALLOWED_ORIGINS = [
 #     "http://localhost:3000",
+#     "http://localhost:3001",
 #     "https://your-frontend-domain.com",
 # ]
 
-# Other CORS settings
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
     'DELETE',
