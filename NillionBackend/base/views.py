@@ -5,6 +5,7 @@ from asgiref.sync import async_to_sync
 from .nillionSetup import NadaPublish
 import logging
 
+
 logger = logging.getLogger(__name__)
 
 @require_GET
@@ -55,3 +56,4 @@ def store_program_view(request):
         return JsonResponse(response, status=500)
     
     return JsonResponse(response)
+

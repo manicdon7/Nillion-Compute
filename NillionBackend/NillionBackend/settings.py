@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'base'
 ]
 
 
@@ -81,7 +82,17 @@ TEMPLATES = [
     },
 ]
 
-
+DATABASES = {
+   'default': {
+       'ENGINE': 'djongo',
+       'CLIENT': {
+           
+           'host': "mongodb+srv://nagi:nagi@cluster0.ohv5gsc.mongodb.net/",
+           'name':'CryptoDate',
+           'authMechanism': "SCRAM-SHA-1",
+        }
+   }
+}
 
 WSGI_APPLICATION = 'NillionBackend.wsgi.application'
 

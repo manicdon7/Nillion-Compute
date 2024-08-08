@@ -17,8 +17,24 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from base.views import *
+from base.Router.profile import *
+from base.Router.chat import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('store-program', store_program_view, name='store-program'),
 ]
+
+profiles = [
+    path('create/', create_profile, name='create_profile'),
+    path('all/', get_all_profiles, name='get_all_profiles'),
+    path('address/<str:address>/', get_profile_by_address, name='get_profile_by_address'),
+    path('match/<str:address>/', get_matching_profiles, name='get_matching_profiles'),
+]
+
+chat = [
+    path('create_chat/', create_chat, name='create_chat'),
+    path('send_message/', send_message, name='send_message'),
+]
+urlpatterns+=profiles
+urlpatterns+=chat
